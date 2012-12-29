@@ -1,0 +1,8 @@
+##############################
+    How to build practices
+#############################
+$ cd build
+$ cmake .. -G "Unix Makefiles"
+$ make
+
+And for each practice, there will be a corresponding executable available in build dir.
