@@ -43,12 +43,13 @@ class FiniteAuto:
 		"""Add a list of transitions to the finite automaton
 		"""
 		for eachTrans in transitions:
-			self.edges.append((
-					str( eachTrans.fromSt),
-					str( eachTrans.toSt),
-					str( eachTrans.cond)))
+			fromSt = str( eachTrans.fromSt)
+			toSt   = str( eachTrans.toSt)
+			cond   = str( eachTrans.cond)
+
+			self.edges.append( ( fromSt, toSt, cond))
 			if eachTrans.isToStAcceptAble:
-				self.acceptSts.add( eachTrans.toSt) 
+				self.acceptSts.add( toSt) 
 
 		self.__addEdges()
 		pass
